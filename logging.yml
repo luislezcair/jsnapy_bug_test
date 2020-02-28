@@ -1,0 +1,22 @@
+version: 1
+
+disable_existing_loggers: True 
+
+## use formatters to cutomize your output
+## add of remove parameters accordingly
+##
+
+formatters:
+    default:
+        format: "%(message)s"
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: DEBUG
+        formatter: default
+        stream: ext://sys.stdout
+
+root:
+    level: DEBUG 
+    handlers: [console]
+

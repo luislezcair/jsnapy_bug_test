@@ -1,0 +1,27 @@
+<route-information>
+    <route-table>
+        <table-name>VRF14.inet.0</table-name>
+        <rt style="brief-mpls-fwd">
+            <rt-entry>
+                <active-tag>*</active-tag>
+                <protocol-name>BGP</protocol-name>
+                <as-path>60606</as-path>
+                <nh>
+                    <selected-next-hop/>
+                    <to>10.1.199.66</to>
+                    <via>irb.283</via>
+                </nh>
+            </rt-entry>
+
+            <rt-entry>
+                <active-tag> </active-tag>
+                <protocol-name>BGP</protocol-name>
+                <as-path>60606</as-path>
+                <nh>
+                    <to>10.1.253.0</to>
+                    <via>ae0.0</via>
+                </nh>
+            </rt-entry>
+        </rt>
+    </route-table>
+</route-information>

@@ -1,0 +1,22 @@
+show_default_route:
+  - command: "show route 0.0.0.0"
+  - ignore-null: true
+  - iterate:
+      xpath: //route-table[normalize-space(table-name) != "inet.0" and normalize-space(table-name) != "VRF02.inet.0"]/rt/rt-entry
+      id: ../../table-name, ./active-tag
+      tests:
+        - no-diff: ./protocol-name
+          err: "Different protocol name"
+          info: "Same protocol name"
+
+        - no-diff: ./as-path
+          err: "Different as-path"
+          info: "Same as-path"
+
+        - no-diff: ./nh/to
+          err: "Different next hop IP"
+          info: "Same next hop IP"
+
+        - no-diff: ./nh/via
+          err: "Different next hop interface"
+          info: "Same next hop interface"
