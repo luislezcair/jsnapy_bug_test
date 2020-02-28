@@ -4,7 +4,7 @@
         <rt style="brief-mpls-fwd">
             <rt-entry>
                 <active-tag>*</active-tag>
-                <protocol-name>BGP</protocol-name>
+                <protocol-name>Not bgp</protocol-name>
                 <as-path>60606</as-path>
                 <nh>
                     <selected-next-hop/>
@@ -15,7 +15,7 @@
 
             <rt-entry>
                 <active-tag> </active-tag>
-                <protocol-name>BGP</protocol-name>
+                <protocol-name>Definitely not bgp</protocol-name>
                 <as-path>60606</as-path>
                 <nh>
                     <to>10.1.253.0</to>
